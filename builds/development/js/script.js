@@ -56,24 +56,29 @@ $(function() {
     var windowpos = $(window).scrollTop() + topoffset;
     $('nav li a').removeClass('active');
 
-    if (windowpos > $('#hotelinfo').offset().top) {
-      $('nav li a').removeClass('active');
-      $('a[href$="#hotelinfo"]').addClass('active');
-    } //windowpos
-
-    if (windowpos > $('#rooms').offset().top) {
+    if (windowpos > $('#westminster').offset().top) {
       $('nav li a').removeClass('active');
       $('a[href$="#rooms"]').addClass('active');
     } //windowpos
 
-    if (windowpos > $('#dining').offset().top) {
+     if (windowpos > $('#picadilly').offset().top) {
       $('nav li a').removeClass('active');
-      $('a[href$="#dining"]').addClass('active');
+      $('a[href$="#rooms"]').addClass('active');
     } //windowpos
 
-    if (windowpos > $('#events').offset().top) {
+         if (windowpos > $('#cambridge').offset().top) {
       $('nav li a').removeClass('active');
-      $('a[href$="#events"]').addClass('active');
+      $('a[href$="#rooms"]').addClass('active');
+    } //windowpos
+
+         if (windowpos > $('#oxford').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#rooms"]').addClass('active');
+    } //windowpos
+
+         if (windowpos > $('#victoria').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#rooms"]').addClass('active');
     } //windowpos
 
     if (windowpos > $('#attractions').offset().top) {
