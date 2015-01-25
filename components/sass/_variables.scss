@@ -5,7 +5,7 @@
 $susy: (
   columns: 12,
   container: 60em,
-  gutters: 1/4,
+  gutters: 0,
   gutter-position: inside
 );
 
@@ -13,6 +13,7 @@ $narrow: 400px;
 $small: 650px;
 $medium: 960px;
 $wide: 1200px;
+
 
 
 //Add Color Palette
@@ -24,7 +25,7 @@ $red        : #DF4848;
 $pink       : #CD0069;
 $purple     : #6C71C4;
 $dark       : #000000;
-$light      : #FFFFFF;
+$light      : #e3e5e5;
 
 $backgroundColor    : $light;
 $typeDefault        : $dark;
