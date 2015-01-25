@@ -102,36 +102,58 @@ $(function() {
       left: -700
     }, 
     {
-      left: 700,
+      left: 800,
       ease: Back.easeOut
     }
   );
-    var westminstertween = TweenMax.staggerFromTo('#westminster .lgpic', 2, 
+
+  var flufftween = TweenMax.staggerFromTo('#westminster .smpic', 1, 
     { 
-      left: -700
+      opacity: 0, 
+      scale: 0
     }, 
     {
-      left: 700,
+      delay: 1,
+      opacity: 1, 
+      scale: 1,
       ease: Back.easeOut
     }
+  );  
+    var fluffguytween = TweenMax.staggerFromTo('#westminster .lgpic', .5, 
+    { 
+      left: 1500
+    }, 
+    {
+      left: 800,
+      delay: 1,
+      ease: Cubic.easeOut
+    }
   );
-  
+    var fluffdancertween = TweenMax.staggerFromTo('#westminster .lgpic2', .5, 
+    { 
+      left: -1800
+    }, 
+    {
+      left: -400,
+      delay: 3,
+      ease: Cubic.easeOut
+    }
+  );
+ 
   // Create the Scene and trigger when visible
   var scene = new ScrollScene({triggerElement: '#attractions', duration: 200}) 
     .setTween(attractionstween)
     .addTo(controller);
 
-  var scene2 = new ScrollScene({triggerElement: "#westminster", duration: 2400})
-          .setPin("#westminster")
-          .setTween(westminstertween)
-          .addTo(controller);
-
-  /*var scene3 = new ScrollScene({triggerElement: '#westminster', duration: 500}) 
-    .setTween(westminstertween)
+  var scene2 = new ScrollScene({triggerElement: "#westminster", duration: 8000})
+    .setPin("#westminster")
+    .setTween(flufftween)
+    .setTween(fluffguytween)
     .addTo(controller);
 
-  // show indicators (requires debug extension)
-  //scene.addIndicators();*/
+  var scene3 = new ScrollScene({triggerElement: '#westminster', duration: 8000}) 
+    .setTween(fluffdancertween)
+    .addTo(controller);
    
 }); //on load
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})

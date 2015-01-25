@@ -1,0 +1,67 @@
+delay: 1
+
+  //set up ScrollMagic
+
+  var controller = new ScrollMagic({
+    globalSceneOptions: {
+      triggerHook: "onLeave"
+    }
+  });
+
+  // Animation will be ignored and replaced by scene value in this example
+  var attractionstween = TweenMax.staggerFromTo('#attractions .lgpic', .5, 
+    { 
+      left: -700
+    }, 
+    {
+      left: 800,
+      ease: Back.easeOut
+    }
+  );
+
+    var fluffguytween = TweenMax.staggerFromTo('#westminster .lgpic', .5, 
+    { 
+      left: 1200
+    }, 
+    {
+      left: 800,
+      delay: 1,
+      ease: Back.easeOut
+    }
+  );
+    var fluffdancertween = TweenMax.staggerFromTo('#westminster .lgpic2', .5, 
+    { 
+      left: -1800
+    }, 
+    {
+      left: -400,
+      delay: 2,
+      ease: Cubic.easeOut
+    }
+  );
+ 
+  // Create the Scene and trigger when visible
+  var scene = new ScrollScene({triggerElement: '#attractions', duration: 200}) 
+    .setTween(attractionstween)
+    .addTo(controller);
+
+  var scene2 = new ScrollScene({triggerElement: "#westminster", duration: 8000})
+    .setPin("#westminster")
+    .setTween(attractionstween)
+    .setTween(fluffguytween)
+    .addTo(controller);
+  var scene3 = new ScrollScene({triggerElement: '#westminster', duration: 8000}) 
+    .setTween(fluffdancertween)
+    .addTo(controller);
+
+
+
+    .smpic{
+    vertical-align: top;
+    height:10%;
+  position: center;
+  }
+
+        <div class="smpic">
+          <img id= "fluff" class="smallheight" src="images/union/fluff.png">  
+      </div>
