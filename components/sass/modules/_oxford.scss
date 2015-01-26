@@ -1,14 +1,19 @@
 #oxford {
-@include span(12);
-overflow: hidden;
-  padding: 0;
-  @include clearfix;
-  z-index: 1;
-     @include backImage('../images/union/skyline.jpg');
-  .lgpic{
-    position: absolute;
-  }
-
-}
+	@include span(12);
+	overflow: hidden;
+	padding: 0;
+	@include clearfix;
+	z-index: 1;
+	@include backImage('../images/union/murallarge.jpg');
+	.lgpic{
+		position: absolute;
+	}//.lgpic
+	.spacer{
+		@include display-flex();
+		@include align-items(center);
+		@include justify-content(center);  
+	}
+	 #spacer2 { @include backImage('../images/union/skylineParallax3.jpg');}
+}//oxford
 
 

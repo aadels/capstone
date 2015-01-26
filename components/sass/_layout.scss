@@ -11,6 +11,13 @@ body {
   .pic {
     margin: 0;
   }
+   .spacer{
+    height: 40%;
+  }
+    .bldgpic{
+    position: absolute;
+    width: 25%
+    }
 
   article {
     @include container(95%);

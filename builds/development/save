@@ -59,9 +59,39 @@ delay: 1
     .smpic{
     vertical-align: top;
     height:10%;
-  position: center;
+  position: absolute;
   }
 
         <div class="smpic">
           <img id= "fluff" class="smallheight" src="images/union/fluff.png">  
       </div>
+
+
+       var buildingtween2 = TweenMax.staggerFromTo('#victoria .bldgpic2', 1, 
+    { 
+      left: -1800
+    }, 
+    {
+      left: 991,
+      delay: 2,
+      ease: Cubic.easeOut
+    }
+  );
+  var buildingtween3 = TweenMax.staggerFromTo('#victoria .bldgpic3', 1.5, 
+    { 
+      left: -1800
+    }, 
+    {
+      left: 592,
+      delay: 3,
+      ease: Cubic.easeOut
+    }
+  );
+
+  var scene2b = new ScrollScene({triggerElement: '#victoria', duration: 7000}) 
+    .setTween(buildingtween2)
+    .addTo(controller);
+
+   var scene2c = new ScrollScene({triggerElement: '#victoria', duration: 6000}) 
+    .setTween(buildingtween3)
+    .addTo(controller);

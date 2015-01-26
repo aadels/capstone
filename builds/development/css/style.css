@@ -112,7 +112,16 @@ body {
 .scene .pic {
   margin: 0;
 }
-/* line 15, ../../../components/sass/_layout.scss */
+/* line 14, ../../../components/sass/_layout.scss */
+.scene .spacer {
+  height: 40%;
+}
+/* line 17, ../../../components/sass/_layout.scss */
+.scene .bldgpic {
+  position: absolute;
+  width: 25%;
+}
+/* line 22, ../../../components/sass/_layout.scss */
 .scene article {
   max-width: 95%;
   margin-left: auto;
@@ -131,7 +140,7 @@ body {
   }
 }
 @media (min-width: 960px) {
-  /* line 24, ../../../components/sass/_layout.scss */
+  /* line 31, ../../../components/sass/_layout.scss */
   .scene article {
     max-width: 60em;
     margin-left: auto;
@@ -350,6 +359,8 @@ header #nav .navbar ul li a.active {
   box-sizing: border-box;
   width: 100%;
   float: left;
+  display: -webkit-flex;
+  display: flex;
   overflow: hidden;
   padding: 0;
   z-index: 1;
@@ -370,8 +381,8 @@ header #nav .navbar ul li a.active {
 #westminster:after {
   clear: both;
 }
-/* line 8, ../../../components/sass/modules/_westminster.scss */
-#westminster .lgpic, #westminster .lgpic2, #westminster .lgpic3, #westminster .lgpic4, #westminster .lgpic5 {
+/* line 9, ../../../components/sass/modules/_westminster.scss */
+#westminster .lgpic, #westminster .lgpic2, #westminster .lgpic3, #westminster .lgpic4, #westminster .lgpic5, #westminster .smpic {
   position: absolute;
 }
 
@@ -406,37 +417,24 @@ header #nav .navbar ul li a.active {
 #picadilly .lgpic {
   position: absolute;
 }
-
-/* line 1, ../../../components/sass/modules/_cambridge.scss */
-#cambridge {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  overflow: hidden;
-  padding: 0;
-  z-index: 1;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/union/bowstreet.jpg");
+/* line 11, ../../../components/sass/modules/_picadilly.scss */
+#picadilly .spacer {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/* line 16, ../../../components/sass/modules/_picadilly.scss */
+#picadilly #spacer1 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/union/skylineParallax2.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-/* line 22, ../../../components/sass/_mixins.scss */
-#cambridge:before, #cambridge:after {
-  content: '';
-  display: table;
-}
-/* line 27, ../../../components/sass/_mixins.scss */
-#cambridge:after {
-  clear: both;
-}
-/* line 8, ../../../components/sass/modules/_cambridge.scss */
-#cambridge .lgpic {
-  position: absolute;
 }
 
 /* line 1, ../../../components/sass/modules/_oxford.scss */
@@ -449,7 +447,7 @@ header #nav .navbar ul li a.active {
   overflow: hidden;
   padding: 0;
   z-index: 1;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/union/skyline.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/union/murallarge.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -470,6 +468,25 @@ header #nav .navbar ul li a.active {
 #oxford .lgpic {
   position: absolute;
 }
+/* line 11, ../../../components/sass/modules/_oxford.scss */
+#oxford .spacer {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/* line 16, ../../../components/sass/modules/_oxford.scss */
+#oxford #spacer2 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/union/skylineParallax3.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 /* line 1, ../../../components/sass/modules/_victoria.scss */
 #victoria {
@@ -478,6 +495,8 @@ header #nav .navbar ul li a.active {
   box-sizing: border-box;
   width: 100%;
   float: left;
+  display: -webkit-flex;
+  display: flex;
   overflow: hidden;
   padding: 0;
   z-index: 1;
@@ -498,8 +517,12 @@ header #nav .navbar ul li a.active {
 #victoria:after {
   clear: both;
 }
-/* line 8, ../../../components/sass/modules/_victoria.scss */
-#victoria .lgpic {
+/* line 9, ../../../components/sass/modules/_victoria.scss */
+#victoria .lgpic, #victoria .lgpic2, #victoria .lgpic3, #victoria .lgpic4, #victoria .lgpic5, #victoria .smpic {
+  position: absolute;
+}
+/* line 12, ../../../components/sass/modules/_victoria.scss */
+#victoria .bldgpic1, #victoria .bldgpic2, #victoria .bldgpic3 {
   position: absolute;
 }
 

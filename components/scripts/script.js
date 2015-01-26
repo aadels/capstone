@@ -43,11 +43,6 @@ $(function() {
       $('a[href$="#rooms"]').addClass('active');
     } //windowpos
 
-         if (windowpos > $('#cambridge').offset().top) {
-      $('nav li a').removeClass('active');
-      $('a[href$="#rooms"]').addClass('active');
-    } //windowpos
-
          if (windowpos > $('#oxford').offset().top) {
       $('nav li a').removeClass('active');
       $('a[href$="#rooms"]').addClass('active');
@@ -86,23 +81,39 @@ $(function() {
 
   var flufftween = TweenMax.staggerFromTo('#westminster .smpic', 1, 
     { 
+      left: 400,
       opacity: 0, 
       scale: 0
     }, 
     {
       delay: 1,
+      left: 400,
       opacity: 1, 
       scale: 1,
       ease: Back.easeOut
     }
-  );  
+);
+  var flufftween2 = TweenMax.staggerFromTo('#westminster .smpic', 30, 
+    { 
+      left: 400,
+      opacity: 1, 
+      scale: 1
+    }, 
+    {
+      left: 400,
+      delay: 10,
+      opacity: 0, 
+      scale: 1,
+      ease: Back.easeOut
+    }
+);  
     var fluffguytween = TweenMax.staggerFromTo('#westminster .lgpic', .5, 
     { 
-      left: 1500
+      left: 1800
     }, 
     {
       left: 800,
-      delay: 1,
+      delay: .5,
       ease: Cubic.easeOut
     }
   );
@@ -112,24 +123,94 @@ $(function() {
     }, 
     {
       left: -400,
+      delay: 2,
+      ease: Cubic.easeOut
+    }
+  );
+
+    var buildingtween1 = TweenMax.staggerFromTo('#victoria .bldgpic1', .5, 
+    { 
+      left: -1800
+    }, 
+    {
+      left: 1390,
+      delay: 1,
+      ease: Cubic.easeOut
+    }
+  );
+  var buildingtween2 = TweenMax.staggerFromTo('#victoria .bldgpic2', 1, 
+    { 
+      left: -1800
+    }, 
+    {
+      left: 991,
+      delay: 2,
+      ease: Cubic.easeOut
+    }
+  );
+  var buildingtween3 = TweenMax.staggerFromTo('#victoria .bldgpic3', 1.5, 
+    { 
+      left: -1800
+    }, 
+    {
+      left: 592,
       delay: 3,
       ease: Cubic.easeOut
     }
   );
+
+
  
   // Create the Scene and trigger when visible
   var scene = new ScrollScene({triggerElement: '#attractions', duration: 200}) 
     .setTween(attractionstween)
     .addTo(controller);
-
-  var scene2 = new ScrollScene({triggerElement: "#westminster", duration: 8000})
-    .setPin("#westminster")
+  
+  var scene1a = new ScrollScene({triggerElement: '#westminster', duration: 200}) 
     .setTween(flufftween)
+    .addTo(controller);
+
+  var scene1b = new ScrollScene({triggerElement: "#westminster", duration: 8000})
+    .setPin("#westminster")
     .setTween(fluffguytween)
     .addTo(controller);
 
-  var scene3 = new ScrollScene({triggerElement: '#westminster', duration: 8000}) 
+  var scene1c = new ScrollScene({triggerElement: '#westminster', duration: 8000}) 
     .setTween(fluffdancertween)
     .addTo(controller);
+
+  var scene1d = new ScrollScene({triggerElement: '#westminster', duration: 8000}) 
+    .setTween(flufftween2)
+    .addTo(controller);
+
+   var scene2a = new ScrollScene({triggerElement: '#victoria', duration: 8000}) 
+    .setPin("#victoria")
+    .setTween(buildingtween1)
+    .addTo(controller);
+
+  var scene2b = new ScrollScene({triggerElement: '#victoria', duration: 7000}) 
+    .setTween(buildingtween2)
+    .addTo(controller);
+
+   var scene2c = new ScrollScene({triggerElement: '#victoria', duration: 6000}) 
+    .setTween(buildingtween3)
+    .addTo(controller);
+
+    // parallax
+    var parallaxController = new ScrollMagic({
+    globalSceneOptions: {
+      triggerHook: "onEnter", duration: $(window).height()*2}
+  });
+  
+  new ScrollScene({triggerElement: "#picadilly"})
+    .setTween(TweenMax.from("#picadilly > div", 1, {top: "-80%", ease: Linear.easeNone}))
+    .addTo(parallaxController)
+    .addIndicators({zindex: 1, suffix: "1"});
+
+  new ScrollScene({triggerElement: "#oxford"})
+    .setTween(TweenMax.from("#oxford > div", 1, {top: "-80%", ease: Linear.easeNone}))
+    .addTo(parallaxController) 
+    .addIndicators({zindex: 1, suffix: "2"}); 
+
    
 }); //on load
