@@ -95,3 +95,14 @@ delay: 1
    var scene2c = new ScrollScene({triggerElement: '#victoria', duration: 6000}) 
     .setTween(buildingtween3)
     .addTo(controller);
+
+
+
+
+    .spacer{
+    @include display-flex();
+    @include align-items(center);
+    @include justify-content(center);  
+  }
+   #spacer1 { @include backImage('../images/union/skylineParallax2.jpg');}
+   #spacer2 { @include backImage('../images/union/skylineParallax3.jpg');}

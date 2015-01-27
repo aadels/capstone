@@ -2,18 +2,16 @@
 @include span(12);
 @include display-flex();
 overflow: hidden;
-  padding: 0;
-  @include clearfix;
-  z-index: 1;
-     @include backImage('../images/union/barrister.jpg');
-  .lgpic, .lgpic2, .lgpic3, .lgpic4, .lgpic5, .smpic{
-    position: absolute;
-  }
-  .bldgpic1, .bldgpic2, .bldgpic3{
-    position: absolute;
-    
+padding: 0;
+@include clearfix;
+z-index: 1;
+ @include backImage('../images/union/barrister.jpg');
 
-  }
+.bldgpic1, .bldgpic2, .bldgpic3, .bldgpic4 {
+position: absolute;
+width: 25%;
+}
+
 }
 
 

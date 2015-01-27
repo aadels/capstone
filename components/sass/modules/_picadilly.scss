@@ -8,12 +8,7 @@ overflow: hidden;
   .lgpic{
     position: absolute;
   }
-	.spacer{
-		@include display-flex();
-		@include align-items(center);
-		@include justify-content(center);  
-	}
-	 #spacer1 { @include backImage('../images/union/skylineParallax2.jpg');}
+	
 }
 
 

@@ -11,13 +11,13 @@ body {
   .pic {
     margin: 0;
   }
-   .spacer{
-    height: 40%;
+.spacer{
+    @include display-flex();
+    @include align-items(center);
+    @include justify-content(center);  
   }
-    .bldgpic{
-    position: absolute;
-    width: 25%
-    }
+   #spacer1 { @include backImage('../images/union/skylineParallax2.jpg');}
+   #spacer2 { @include backImage('../images/union/skylineParallax3.jpg');}
 
   article {
     @include container(95%);

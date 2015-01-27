@@ -79,11 +79,11 @@ $(function() {
     }
   );
 
-  var flufftween = TweenMax.staggerFromTo('#westminster .smpic', 1, 
+  var flufftween = TweenMax.staggerFromTo('#westminster .smpic', 4, 
     { 
       left: 400,
       opacity: 0, 
-      scale: 0
+      scale: 1
     }, 
     {
       delay: 1,
@@ -93,7 +93,7 @@ $(function() {
       ease: Back.easeOut
     }
 );
-  var flufftween2 = TweenMax.staggerFromTo('#westminster .smpic', 30, 
+  var flufftween2 = TweenMax.staggerFromTo('#westminster .smpic', 5, 
     { 
       left: 400,
       opacity: 1, 
@@ -101,7 +101,7 @@ $(function() {
     }, 
     {
       left: 400,
-      delay: 10,
+      delay: 25,
       opacity: 0, 
       scale: 1,
       ease: Back.easeOut
@@ -159,6 +159,17 @@ $(function() {
     }
   );
 
+    var buildingtween4 = TweenMax.staggerFromTo('#victoria .bldgpic4', 2, 
+    { 
+      left: -1800
+    }, 
+    {
+      left: 193,
+      delay: 4,
+      ease: Cubic.easeOut
+    }
+  );
+
 
  
   // Create the Scene and trigger when visible
@@ -166,7 +177,7 @@ $(function() {
     .setTween(attractionstween)
     .addTo(controller);
   
-  var scene1a = new ScrollScene({triggerElement: '#westminster', duration: 200}) 
+  var scene1a = new ScrollScene({triggerElement: '#westminster', duration: 1000}) 
     .setTween(flufftween)
     .addTo(controller);
 
@@ -183,7 +194,7 @@ $(function() {
     .setTween(flufftween2)
     .addTo(controller);
 
-   var scene2a = new ScrollScene({triggerElement: '#victoria', duration: 8000}) 
+  var scene2a = new ScrollScene({triggerElement: '#victoria', duration: 8000}) 
     .setPin("#victoria")
     .setTween(buildingtween1)
     .addTo(controller);
@@ -192,8 +203,12 @@ $(function() {
     .setTween(buildingtween2)
     .addTo(controller);
 
-   var scene2c = new ScrollScene({triggerElement: '#victoria', duration: 6000}) 
+  var scene2c = new ScrollScene({triggerElement: '#victoria', duration: 6000}) 
     .setTween(buildingtween3)
+    .addTo(controller);
+
+  var scene2d = new ScrollScene({triggerElement: '#victoria', duration: 5000}) 
+    .setTween(buildingtween4)
     .addTo(controller);
 
     // parallax
