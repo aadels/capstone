@@ -10,14 +10,16 @@ body {
 
   .pic {
     margin: 0;
+
   }
+
 .spacer{
     @include display-flex();
     @include align-items(center);
-    @include justify-content(center);  
+    @include justify-content(center); 
+    #spacer1 { @include backImage('../images/union/skylineParallax2.jpg');}
+    #spacer2 { @include backImage('../images/union/skylineParallax3.jpg');} 
   }
-   #spacer1 { @include backImage('../images/union/skylineParallax2.jpg');}
-   #spacer2 { @include backImage('../images/union/skylineParallax3.jpg');}
 
   article {
     @include container(95%);

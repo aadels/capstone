@@ -1,4 +1,4 @@
-header #nav {
+#nav {
   @include clearfix;
   @include background-image(linear-gradient(top, lighten($navBackground, 10), $navBackground));
   width: 100%;
@@ -47,7 +47,7 @@ header #nav {
           background-position: 2px;
 
           &.info { background-image: url('../images/icons/info.png');}
-          &.rooms { background-image: url('../images/icons/rooms.png');}
+          &.community { background-image: url('../images/icons/community.png');}
           &.dining { background-image: url('../images/icons/dining.png');}
           &.events { background-image: url('../images/icons/events.png');}
           &.attractions { background-image: url('../images/icons/attractions.png');}

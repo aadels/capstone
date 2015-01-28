@@ -28,8 +28,9 @@ if (env==='development') {
 
 jsSources = [
   'components/scripts/jqloader.js',
-  'components/scripts/TweenMax.min.js',
+  'components/scripts/TweenMax.js',
   'components/scripts/jquery.scrollmagic.min.js',
+  //'components/scripts/jquery.scrollmagic.debug.js',
   'components/scripts/script.js'
 ];
 sassSources = ['components/sass/style.scss'];

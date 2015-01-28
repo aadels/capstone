@@ -1,4 +1,5 @@
 #victoria {
+@include container(100%);
 @include span(12);
 @include display-flex();
 overflow: hidden;
@@ -6,10 +7,15 @@ padding: 0;
 @include clearfix;
 z-index: 1;
  @include backImage('../images/union/barrister.jpg');
-
+.colorpic{
+	position: absolute;
+	width: 100%;
+	z-index: 3;
+}
 .bldgpic1, .bldgpic2, .bldgpic3, .bldgpic4 {
-position: absolute;
-width: 25%;
+	position: absolute;
+	width: 25%;
+	height: auto;
 }
 
 }

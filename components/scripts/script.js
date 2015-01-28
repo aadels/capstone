@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function () {
   var topoffset = 43;
 
   var isTouch = 'ontouchstart' in document.documentElement;
@@ -71,10 +71,10 @@ $(function() {
   // Animation will be ignored and replaced by scene value in this example
   var attractionstween = TweenMax.staggerFromTo('#attractions .lgpic', .5, 
     { 
-      left: -700
+      left: -25vw
     }, 
     {
-      left: 800,
+      left: 75vw,
       ease: Back.easeOut
     }
   );
@@ -217,12 +217,12 @@ $(function() {
       triggerHook: "onEnter", duration: $(window).height()*2}
   });
   
-  new ScrollScene({triggerElement: "#picadilly"})
+  var parallaxscene1 = new ScrollScene({triggerElement: "#picadilly"})
     .setTween(TweenMax.from("#picadilly > div", 1, {top: "-80%", ease: Linear.easeNone}))
     .addTo(parallaxController)
     .addIndicators({zindex: 1, suffix: "1"});
 
-  new ScrollScene({triggerElement: "#oxford"})
+  var parallaxscene2 = new ScrollScene({triggerElement: "#oxford"})
     .setTween(TweenMax.from("#oxford > div", 1, {top: "-80%", ease: Linear.easeNone}))
     .addTo(parallaxController) 
     .addIndicators({zindex: 1, suffix: "2"}); 
