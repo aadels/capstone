@@ -512,12 +512,11 @@ header .fullheight .hgroup p img {
 #victoria .colorpic {
   position: absolute;
   width: 100%;
-  z-index: 3;
 }
 /* line 15, ../../../components/sass/modules/_victoria.scss */
 #victoria .bldgpic1, #victoria .bldgpic2, #victoria .bldgpic3, #victoria .bldgpic4 {
   position: absolute;
-  width: 25%;
+  width: 25vw;
   height: auto;
 }
 

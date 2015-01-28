@@ -7177,7 +7177,7 @@ $(document).ready(function () {
   });
 
   // Animation will be ignored and replaced by scene value in this example
-  var attractionstween = TweenMax.staggerFromTo('#attractions .lgpic', .5, 
+ var attractionstween = TweenMax.staggerFromTo('#attractions .lgpic', .5, 
     { 
       left: -700
     }, 
@@ -7225,6 +7225,7 @@ $(document).ready(function () {
       ease: Cubic.easeOut
     }
   );
+
     var fluffdancertween = TweenMax.staggerFromTo('#westminster .lgpic2', .5, 
     { 
       left: -1800
@@ -7236,48 +7237,70 @@ $(document).ready(function () {
     }
   );
 
+    /*establish current slide index at start
+var leftPositionStart;
+var leftPositionEnd;
+
+
+//animate slides in accordance with buttons pressed in navigation
+buttonBritney.addEventListener("click", function() {
+leftPositionStart = -25;
+TweenLite.to(slideContainer, 2, {left:leftPosition + "%"});
+}, false);*/
+
+var leftPositionStart;
+var leftPositionEnd;
+
+leftPositionStart = -25;
+leftPositionEnd1 = 75;
+leftPositionEnd2 = 50;
+leftPositionEnd3 = 25;
+leftPositionEnd4 = 0;
+
     var buildingtween1 = TweenMax.staggerFromTo('#victoria .bldgpic1', .5, 
     { 
-      left: -1800
+      left:leftPositionStart + "%" 
     }, 
     {
-      left: 1390,
+      left:leftPositionEnd1 + "%",
       delay: 1,
       ease: Cubic.easeOut
     }
   );
-  var buildingtween2 = TweenMax.staggerFromTo('#victoria .bldgpic2', 1, 
+
+    var buildingtween2 = TweenMax.staggerFromTo('#victoria .bldgpic2', 1, 
     { 
-      left: -1800
+      left:leftPositionStart + "%"
     }, 
     {
-      left: 991,
-      delay: 2,
+      left:leftPositionEnd2 + "%",
+      delay: 1,
       ease: Cubic.easeOut
     }
   );
-  var buildingtween3 = TweenMax.staggerFromTo('#victoria .bldgpic3', 1.5, 
+
+    var buildingtween3 = TweenMax.staggerFromTo('#victoria .bldgpic3', 1.5, 
     { 
-      left: -1800
+      left:leftPositionStart + "%"
     }, 
     {
-      left: 592,
-      delay: 3,
+      left:leftPositionEnd3 + "%",
+      delay: 1,
       ease: Cubic.easeOut
     }
   );
 
     var buildingtween4 = TweenMax.staggerFromTo('#victoria .bldgpic4', 2, 
     { 
-      left: -1800
+      left:leftPositionStart + "%"
     }, 
     {
-      left: 193,
-      delay: 4,
+      left:leftPositionEnd4 + "%",
+      delay: 1,
       ease: Cubic.easeOut
     }
   );
-
+  
 
  
   // Create the Scene and trigger when visible
