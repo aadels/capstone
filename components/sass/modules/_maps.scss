@@ -1,0 +1,12 @@
+#maps{
+	@include span(12);
+	overflow: hidden;
+	padding: 0;
+	@include clearfix;
+	z-index: 1;
+	@include backImage('../images/union/murallarge.jpg');
+	.lgpic{
+		position: absolute;
+	}//.lgpic
+
+}//maps

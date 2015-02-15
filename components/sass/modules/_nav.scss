@@ -20,10 +20,11 @@
         text-align: center;
         display: inline-block;
         padding: 10px;
-        font-size: 1.5em;
+        font-size: 2em;
 
         @include breakpoint(max-width $small) {
           font-size: 1.2em;
+          padding: 10px;
           span {display: none;}
         }
       } //a
@@ -31,6 +32,7 @@
 
     ul {
       @include span(8 at 4 of 12);
+      padding: 10px;
       li {
         float: left;
         a {
@@ -48,9 +50,10 @@
 
           &.info { background-image: url('../images/icons/info.png');}
           &.community { background-image: url('../images/icons/community.png');}
-          &.dining { background-image: url('../images/icons/dining.png');}
+          &.business { background-image: url('../images/icons/business.png');}
+          &.housing { background-image: url('../images/icons/housing.png');}
           &.events { background-image: url('../images/icons/events.png');}
-          &.attractions { background-image: url('../images/icons/attractions.png');}
+          &.maps { background-image: url('../images/icons/map.png');}
 
           &:hover {
             background-color: $navHover;

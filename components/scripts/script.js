@@ -3,14 +3,17 @@ $(document).ready(function () {
 
   var isTouch = 'ontouchstart' in document.documentElement;
 
-  //window height
+  //window height & width
   var wheight = $(window).height(); //get height of the window
-
+  var wwidth = $(window).width(); //get width of the window
   $('.fullheight').css('height', wheight);
+  $('.bldgpic').css('width', wwidth * .25);
 
   $(window).resize(function() {
-    var wheight = $(window).height(); //get height of the window
-    $('.fullheight').css('height', wheight);
+  var wheight = $(window).height(); //get height of the window
+  var wwidth = $(window).width(); //get width of the window
+  $('.fullheight').css('height', wheight);
+  $('.bldgpic').css('width', wwidth * .25);
   }) //on resize
 
 
@@ -28,17 +31,17 @@ $(document).ready(function () {
     } //location hostname
   }); //on click
 
-  //highlight navigation
+  /*highlight navigation
   $(window).scroll(function() {
     var windowpos = $(window).scrollTop() + topoffset;
     $('nav li a').removeClass('active');
 
-    if (windowpos > $('#westminster').offset().top) {
+    if (windowpos > $('#community').offset().top) {
       $('nav li a').removeClass('active');
       $('a[href$="#rooms"]').addClass('active');
     } //windowpos
 
-     if (windowpos > $('#picadilly').offset().top) {
+     if (windowpos > $('#housing').offset().top) {
       $('nav li a').removeClass('active');
       $('a[href$="#rooms"]').addClass('active');
     } //windowpos
@@ -48,7 +51,7 @@ $(document).ready(function () {
       $('a[href$="#rooms"]').addClass('active');
     } //windowpos
 
-         if (windowpos > $('#victoria').offset().top) {
+         if (windowpos > $('#business').offset().top) {
       $('nav li a').removeClass('active');
       $('a[href$="#rooms"]').addClass('active');
     } //windowpos
@@ -56,9 +59,9 @@ $(document).ready(function () {
     if (windowpos > $('#attractions').offset().top) {
       $('nav li a').removeClass('active');
       $('a[href$="#attractions"]').addClass('active');
-    } //windowpos
+    } windowpos
 
-  }); //window scroll
+  }); //window scroll*/
   
   //set up ScrollMagic
 
@@ -69,17 +72,8 @@ $(document).ready(function () {
   });
 
   // Animation will be ignored and replaced by scene value in this example
- var attractionstween = TweenMax.staggerFromTo('#attractions .lgpic', .5, 
-    { 
-      left: -700
-    }, 
-    {
-      left: 800,
-      ease: Back.easeOut
-    }
-  );
 
-  var flufftween = TweenMax.staggerFromTo('#westminster .smpic', 4, 
+  var flufftween = TweenMax.staggerFromTo('#community .smpic', 4, 
     { 
       left: 400,
       opacity: 0, 
@@ -93,7 +87,7 @@ $(document).ready(function () {
       ease: Back.easeOut
     }
 );
-  var flufftween2 = TweenMax.staggerFromTo('#westminster .smpic', 5, 
+  var flufftween2 = TweenMax.staggerFromTo('#community .smpic', 5, 
     { 
       left: 400,
       opacity: 1, 
@@ -107,7 +101,7 @@ $(document).ready(function () {
       ease: Back.easeOut
     }
 );  
-    var fluffguytween = TweenMax.staggerFromTo('#westminster .lgpic', .5, 
+    var fluffguytween = TweenMax.staggerFromTo('#community .lgpic', .5, 
     { 
       left: 1800
     }, 
@@ -118,7 +112,7 @@ $(document).ready(function () {
     }
   );
 
-    var fluffdancertween = TweenMax.staggerFromTo('#westminster .lgpic2', .5, 
+    var fluffdancertween = TweenMax.staggerFromTo('#community .lgpic2', .5, 
     { 
       left: -1800
     }, 
@@ -140,54 +134,55 @@ leftPositionStart = -25;
 TweenLite.to(slideContainer, 2, {left:leftPosition + "%"});
 }, false);*/
 
-var leftPositionStart;
-var leftPositionEnd;
+var rightPositionStart;
 
-leftPositionStart = -25vw;
-leftPositionEnd1 = 75;
-leftPositionEnd2 = 50;
-leftPositionEnd3 = 25;
-leftPositionEnd4 = 0;
+rightPositionStart = 150;
+rightPositionEnd1 = 75;
+rightPositionEnd2 = 50;
+rightPositionEnd3 = 25;
+rightPositionEnd4 = 0;
 
-    var buildingtween1 = TweenMax.staggerFromTo('#victoria .bldgpic1', .5, 
+    var buildingtween1 = TweenMax.staggerFromTo('#business .bldgpic1', .5, 
     { 
-      left:leftPositionStart + "%" 
+      right:rightPositionStart + "%" 
     }, 
     {
-      left:leftPositionEnd1 + "%",
+      right:rightPositionEnd1 + "%",
       delay: 1,
       ease: Cubic.easeOut
     }
   );
 
-    var buildingtween2 = TweenMax.staggerFromTo('#victoria .bldgpic2', 1, 
+    var buildingtween2 = TweenMax.staggerFromTo('#business .bldgpic2', 1, 
     { 
-      left:leftPositionStart + "%"
+      right:rightPositionStart + "%"
+
     }, 
     {
-      left:leftPositionEnd2 + "%",
+      right:rightPositionEnd2 + "%",
+      delay: 1,
+
+      ease: Cubic.easeOut
+    }
+  );
+
+    var buildingtween3 = TweenMax.staggerFromTo('#business .bldgpic3', 1.5, 
+    { 
+      right:rightPositionStart + "%"
+    }, 
+    {
+      right:rightPositionEnd3 + "%",
       delay: 1,
       ease: Cubic.easeOut
     }
   );
 
-    var buildingtween3 = TweenMax.staggerFromTo('#victoria .bldgpic3', 1.5, 
+    var buildingtween4 = TweenMax.staggerFromTo('#business .bldgpic4', 2, 
     { 
-      left:leftPositionStart + "%"
+      right:rightPositionStart + "%"
     }, 
     {
-      left:leftPositionEnd3 + "%",
-      delay: 1,
-      ease: Cubic.easeOut
-    }
-  );
-
-    var buildingtween4 = TweenMax.staggerFromTo('#victoria .bldgpic4', 2, 
-    { 
-      left:leftPositionStart + "%"
-    }, 
-    {
-      left:leftPositionEnd4 + "%",
+      right:rightPositionEnd4 + "%",
       delay: 1,
       ease: Cubic.easeOut
     }
@@ -196,41 +191,38 @@ leftPositionEnd4 = 0;
 
  
   // Create the Scene and trigger when visible
-  var scene = new ScrollScene({triggerElement: '#attractions', duration: 200}) 
-    .setTween(attractionstween)
-    .addTo(controller);
   
-  var scene1a = new ScrollScene({triggerElement: '#westminster', duration: 1000}) 
+  var scene1a = new ScrollScene({triggerElement: '#community', duration: 1000}) 
     .setTween(flufftween)
     .addTo(controller);
 
-  var scene1b = new ScrollScene({triggerElement: "#westminster", duration: 8000})
-    .setPin("#westminster")
+  var scene1b = new ScrollScene({triggerElement: "#community", duration: 8000})
+    .setPin("#community")
     .setTween(fluffguytween)
     .addTo(controller);
 
-  var scene1c = new ScrollScene({triggerElement: '#westminster', duration: 8000}) 
+  var scene1c = new ScrollScene({triggerElement: '#community', duration: 8000}) 
     .setTween(fluffdancertween)
     .addTo(controller);
 
-  var scene1d = new ScrollScene({triggerElement: '#westminster', duration: 8000}) 
+  var scene1d = new ScrollScene({triggerElement: '#community', duration: 8000}) 
     .setTween(flufftween2)
     .addTo(controller);
 
-  var scene2a = new ScrollScene({triggerElement: '#victoria', duration: 8000}) 
-    .setPin("#victoria")
+  var scene2a = new ScrollScene({triggerElement: '#business', duration: 8000}) 
+    .setPin("#business")
     .setTween(buildingtween1)
     .addTo(controller);
 
-  var scene2b = new ScrollScene({triggerElement: '#victoria', duration: 7000}) 
+  var scene2b = new ScrollScene({triggerElement: '#business', duration: 7000}) 
     .setTween(buildingtween2)
     .addTo(controller);
 
-  var scene2c = new ScrollScene({triggerElement: '#victoria', duration: 6000}) 
+  var scene2c = new ScrollScene({triggerElement: '#business', duration: 6000}) 
     .setTween(buildingtween3)
     .addTo(controller);
 
-  var scene2d = new ScrollScene({triggerElement: '#victoria', duration: 5000}) 
+  var scene2d = new ScrollScene({triggerElement: '#business', duration: 5000}) 
     .setTween(buildingtween4)
     .addTo(controller);
 
@@ -240,13 +232,13 @@ leftPositionEnd4 = 0;
       triggerHook: "onEnter", duration: $(window).height()*2}
   });
   
-  var parallaxscene1 = new ScrollScene({triggerElement: "#picadilly"})
-    .setTween(TweenMax.from("#picadilly > div", 1, {top: "-80%", ease: Linear.easeNone}))
+  var parallaxscene1 = new ScrollScene({triggerElement: "#housing"})
+    .setTween(TweenMax.from("#housing > div", 1, {top: "-80%", ease: Linear.easeNone}))
     .addTo(parallaxController)
     .addIndicators({zindex: 1, suffix: "1"});
 
-  var parallaxscene2 = new ScrollScene({triggerElement: "#oxford"})
-    .setTween(TweenMax.from("#oxford > div", 1, {top: "-80%", ease: Linear.easeNone}))
+  var parallaxscene2 = new ScrollScene({triggerElement: "#maps"})
+    .setTween(TweenMax.from("#maps > div", 1, {top: "-80%", ease: Linear.easeNone}))
     .addTo(parallaxController) 
     .addIndicators({zindex: 1, suffix: "2"}); 
 

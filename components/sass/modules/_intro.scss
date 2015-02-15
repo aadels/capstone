@@ -1,6 +1,6 @@
 header {
   .fullheight {
-    @include backImage('../images/union/bowstreet.png');
+    @include backImage('../images/union/muralLarge.jpg');
 
     @include display-flex();
     @include align-items(center);

@@ -1,0 +1,13 @@
+.spacer{
+	@include span(12);
+  	padding: 0;
+  	@include clearfix;
+}//spacer
+
+.spacerpic {
+  	width: 100%;
+  	height: 10%;
+  	padding: 0;
+  	vertical-align:bottom;
+
+}//spacerpic

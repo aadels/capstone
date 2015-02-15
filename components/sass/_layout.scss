@@ -6,21 +6,11 @@ body {
 
 .scene {
   position: relative;
-  padding: 20px 0;
+  padding: 0;
 
   .pic {
     margin: 0;
-
   }
-
-.spacer{
-    @include display-flex();
-    @include align-items(center);
-    @include justify-content(center); 
-    #spacer1 { @include backImage('../images/union/skylineParallax2.jpg');}
-    #spacer2 { @include backImage('../images/union/skylineParallax3.jpg');} 
-  }
-
   article {
     @include container(95%);
   } //article
@@ -35,4 +25,7 @@ body {
     } //article
   } // breakpoint
 } //scene
+
+
+
 
