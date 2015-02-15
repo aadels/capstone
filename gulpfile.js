@@ -31,7 +31,9 @@ jsSources = [
   'components/scripts/TweenMax.js',
   'components/scripts/jquery.scrollmagic.min.js',
   //'components/scripts/jquery.scrollmagic.debug.js',
-  'components/scripts/script.js'
+  'components/scripts/script.js',
+  //'components/scripts/modernizr.js', 
+  'http://vjs.zencdn.net/4.11/video.js'
 ];
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
