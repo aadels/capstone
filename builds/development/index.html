@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Somerville Union</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="//vjs.zencdn.net/4.11/video-js.css">
+
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
@@ -36,7 +36,7 @@
 
     <article class="scene fullheight" id="business">
       <div class="bldgpic">
-          <img id= "grooves" class="bldgpic4" src="images/bldg/Groovesbldg.jpg">  
+          <img id= "grooves" class="bldgpic4" src="images/bldg/groovesbldg.jpg">  
       </div>
       <div class="bldgpic">
           <img id= "mamagina" class="bldgpic3" src="images/bldg/mamaginabldg.jpg">  
@@ -50,15 +50,13 @@
     </article>
     
     <article class="scene fullheight" id="housing">
-      <video id="david" class="video-js vjs-default-skin"
-        controls preload="auto" width="640" height="264"
-        data-setup='{"example_option":true}'>
-       <source src="video/davidWeb.mp4" type='video/mp4' />
-       <source src="video/davidwebmhd.webm" type='video/webm' />
-       <source src="video/david.oggtheora.mp4" type='video/ogg' />
-       <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-    </video>
-
+      <a href="#test" class="sublime" data-autoresize="fill" data-settings="close-button-position:right">
+        <img src="images/icons/playimage.png" width="50" height="50" />
+      </a>
+      <video id="test" poster="images/icons/groovesposter.png" width="2000" height="1125" title="Test Video" style="display:none" data-uid="test" data-autoresize="fill"  data-settings="uid:demo-lightbox-close-button-position; autoresize:fit;" preload="none">
+        <source src="video/davidweb.mp4" data-quality="hd" />
+        <source src="video/david.webmhd.webm" data-quality="hd" />
+      </video>
     </article>
 
 
@@ -105,5 +103,6 @@
 
 </footer>
   <script src="js/script.js"></script>
+  <script src="http://cdn.sublimevideo.net/js/46z32qym.js"></script>
 </body>
 </html>

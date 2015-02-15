@@ -7171,7 +7171,7 @@ $(document).ready(function () {
 
   }); //window scroll*/
   
-  //set up ScrollMagic
+  //set up ScrollMagic controller
 
   var controller = new ScrollMagic({
     globalSceneOptions: {
@@ -7179,7 +7179,7 @@ $(document).ready(function () {
     }
   });
 
-  // Animation will be ignored and replaced by scene value in this example
+  //Fluff Tweens
 
   var flufftween = TweenMax.staggerFromTo('#community .smpic', 4, 
     { 
@@ -7231,17 +7231,9 @@ $(document).ready(function () {
     }
   );
 
-    /*establish current slide index at start
-var leftPositionStart;
-var leftPositionEnd;
 
-
-//animate slides in accordance with buttons pressed in navigation
-buttonBritney.addEventListener("click", function() {
-leftPositionStart = -25;
-TweenLite.to(slideContainer, 2, {left:leftPosition + "%"});
-}, false);*/
-
+/*Building Tweens
+establish current slide index at start*/
 var rightPositionStart;
 
 rightPositionStart = 150;
@@ -7296,10 +7288,10 @@ rightPositionEnd4 = 0;
     }
   );
   
+  // Create scenes, set pins and trigger when images are visible
 
- 
-  // Create the Scene and trigger when visible
-  
+
+  //Fluff Scenes
   var scene1a = new ScrollScene({triggerElement: '#community', duration: 1000}) 
     .setTween(flufftween)
     .addTo(controller);
@@ -7334,12 +7326,13 @@ rightPositionEnd4 = 0;
     .setTween(buildingtween4)
     .addTo(controller);
 
-    // parallax
-    var parallaxController = new ScrollMagic({
+  //parallax controller
+  var parallaxController = new ScrollMagic({
     globalSceneOptions: {
-      triggerHook: "onEnter", duration: $(window).height()*2}
+    triggerHook: "onEnter", duration: $(window).height()*2}
   });
   
+  //parallax Tweens
   var parallaxscene1 = new ScrollScene({triggerElement: "#housing"})
     .setTween(TweenMax.from("#housing > div", 1, {top: "-80%", ease: Linear.easeNone}))
     .addTo(parallaxController)
