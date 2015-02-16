@@ -106,3 +106,62 @@ delay: 1
   }
    #spacer1 { @include backImage('../images/union/skylineParallax2.jpg');}
    #spacer2 { @include backImage('../images/union/skylineParallax3.jpg');}
+
+
+
+  
+   /*highlight navigation
+  $(window).scroll(function() {
+    var windowpos = $(window).scrollTop() + topoffset;
+    $('nav li a').removeClass('active');
+
+    if (windowpos > $('#community').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#rooms"]').addClass('active');
+    } //windowpos
+
+     if (windowpos > $('#housing').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#rooms"]').addClass('active');
+    } //windowpos
+
+         if (windowpos > $('#oxford').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#rooms"]').addClass('active');
+    } //windowpos
+
+         if (windowpos > $('#business').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#rooms"]').addClass('active');
+    } //windowpos
+
+    if (windowpos > $('#attractions').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#attractions"]').addClass('active');
+    } windowpos
+
+  }); //window scroll*/
+
+
+
+      <div class="colorpic">
+        <img id= "colorpic2" src="images/misc/greybluecolor.jpg">  
+      </div>
+
+        .colorpic{
+    position: absolute;
+    margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+
+  }
+
+
+
+
+
+
+
+
+
+

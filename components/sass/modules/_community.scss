@@ -6,9 +6,10 @@
 	@include clearfix;
 	z-index: 1;
 	@include backImage('../images/union/fluffcrowd.jpg');
+	
 	.lgpic, .lgpic2, .lgpic3, .lgpic4, .lgpic5, .smpic{
 	position: absolute;
-	}//lgpic
+	}//lgpic smpic
   
 }//community
 

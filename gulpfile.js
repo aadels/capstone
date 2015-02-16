@@ -28,10 +28,11 @@ if (env==='development') {
 
 jsSources = [
   'components/scripts/jqloader.js',
+  'components/scripts/script.js',
   'components/scripts/TweenMax.js',
   'components/scripts/jquery.scrollmagic.min.js',
-  //'components/scripts/jquery.scrollmagic.debug.js',
-  'components/scripts/script.js'
+  'components/scripts/responsive-elements.js'
+  //'components/scripts/jquery.scrollmagic.debug.js'
   //'components/scripts/modernizr.js', 
 
 ];

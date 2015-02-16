@@ -378,7 +378,7 @@ header .fullheight .hgroup p img {
 #community:after {
   clear: both;
 }
-/* line 9, ../../../components/sass/modules/_community.scss */
+/* line 10, ../../../components/sass/modules/_community.scss */
 #community .lgpic, #community .lgpic2, #community .lgpic3, #community .lgpic4, #community .lgpic5, #community .smpic {
   position: absolute;
 }
@@ -494,8 +494,8 @@ header .fullheight .hgroup p img {
 #business:after {
   clear: both;
 }
-/* line 11, ../../../components/sass/modules/_business.scss */
-#business .bldgpic1, #business .bldgpic2, #business .bldgpic3, #business .bldgpic4 {
+/* line 12, ../../../components/sass/modules/_business.scss */
+#business .bldgpic1, #business .bldgpic2, #business .bldgpic3, #business .bldgpic4, #business .colorpic2 {
   position: absolute;
   height: 100%;
   Width: auto;
