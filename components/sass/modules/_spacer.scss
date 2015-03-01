@@ -1,7 +1,8 @@
 .spacer{
 	@include span(12);
   	padding: 0;
-  	@include clearfix;
+  	position: relative;
+
 }//spacer
 
 .spacerpic {

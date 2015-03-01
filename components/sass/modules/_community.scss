@@ -5,7 +5,9 @@
 	padding: 0;
 	@include clearfix;
 	z-index: 1;
-	@include backImage('../images/union/fluffcrowd.jpg');
+	background-image: url(../images/union/fluffcrowd.jpg);
+	background-size: 100% auto;
+
 	
 	.lgpic, .lgpic2, .lgpic3, .lgpic4, .lgpic5, .smpic{
 	position: absolute;

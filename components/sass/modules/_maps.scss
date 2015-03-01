@@ -1,12 +1,17 @@
 #maps{
-	@include span(12);
+@include span(12);
+	position: relative;
 	overflow: hidden;
-	padding: 0;
-	@include clearfix;
-	z-index: 1;
-	@include backImage('../images/union/murallarge.jpg');
-	.lgpic{
-		position: absolute;
-	}//.lgpic
+	height: 100vh;
+  	padding: 0;
+    background-image: url(/images/union/unionsquarecafe.jpg);
+    background-size: 100% auto;
+    
+
+  	> div{
+		position: relative;
+		height: 200%;
+		-webkit-transform: translateZ(0);-webkit-backface-visibility: hidden;-webkit-perspective: 1000;
+	}//housing > div
 
 }//maps

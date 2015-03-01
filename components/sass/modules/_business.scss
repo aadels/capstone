@@ -1,25 +1,20 @@
 #business {
-	@include container(100%);
 	@include span(12);
 	@include display-flex();
 	overflow: hidden;
 	padding: 0;
 	@include clearfix;
 	z-index: 1;
-	 @include backImage('../images/union/barrister.jpg');
-
+	 background-image: url(../images/union/barrister.jpg);
+	 background-size: 100% auto;
 	
 	.bldgpic1, .bldgpic2, .bldgpic3, .bldgpic4,.colorpic2 {
 		position: absolute;
 		height: 100%;
-		Width: auto;
+		width: auto;
 		overflow: hidden;
-		vertical-align:bottom;
+
 	}//bldgpic
-
-
-
-	
 	
 }//business
 

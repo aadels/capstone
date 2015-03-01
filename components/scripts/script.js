@@ -1,4 +1,4 @@
-$(document).ready(function () {
+  $(document).ready(function($) {
   var topoffset = 43;
 
   var isTouch = 'ontouchstart' in document.documentElement;
@@ -33,10 +33,8 @@ $(document).ready(function () {
       } // target.length
     } //location hostname
   }); //on click
-
   
-  
-//set up ScrollMagic controller for Fluff and Building Tweens
+//init controller for Fluff and Building Tweens
   var controller = new ScrollMagic({
     globalSceneOptions: {
       triggerHook: "onLeave"
@@ -231,14 +229,14 @@ $(document).ready(function () {
     .addTo(controller);
 
 
-//Create Parallax controller
+/*Create Parallax controller
   var parallaxController = new ScrollMagic({
     globalSceneOptions: {
-    triggerHook: "onEnter", duration: $(window).height()*2}
+    triggerHook: "onEnter", duration: wheight *2}
   });
   
   //Create Parallax Tweens, 
-  var parallaxtween1 = TweenMax.from("#housing > div", 1, 
+  /*var parallaxtween1 = TweenMax.from("#housing > div", 1, 
     {top: "-80%", ease: Linear.easeNone}
   );
 
@@ -255,7 +253,21 @@ $(document).ready(function () {
   var parallaxscene2 = new ScrollScene({triggerElement: "#maps"})
     .setTween(parallaxtween2)
     .addTo(parallaxController) 
-    .addIndicators({zindex: 1, suffix: "2"}); 
+    .addIndicators({zindex: 1, suffix: "2"}); */
 
-   
+    //other parallax tween setup
+
+  // init controller
+  var controller = new ScrollMagic({globalSceneOptions: {triggerHook: "onEnter", duration: $(window).height()*2}});
+
+  new ScrollScene({triggerElement: "#housing"})
+    .setTween(TweenMax.from("#housing > div", 1, {top: "-80%", ease: Linear.easeNone}))
+    .addTo(controller);
+    //.addIndicators({zindex: 1, suffix: "1"});
+
+  new ScrollScene({triggerElement: "#maps"})
+    .setTween(TweenMax.from("#maps > div", 1, {top: "-80%", ease: Linear.easeNone}))
+    .addTo(controller);
+    //.addIndicators({zindex: 1, suffix: "2"});
+  
 }); //on load
